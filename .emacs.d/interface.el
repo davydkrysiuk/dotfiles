@@ -9,6 +9,9 @@
 (global-display-line-numbers-mode 1)
 (setq-default tab-width 4)
 
+(setq make-backup-files nil) 
+(setq auto-save-default nil)
+
 (setq dired-deletion-confirmer '(lambda (x) t))
 (setq use-short-answers t)
 
