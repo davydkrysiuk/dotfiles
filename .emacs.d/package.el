@@ -13,6 +13,13 @@
 (use-package kaolin-themes)
 (load-theme 'kaolin-valley-dark t)
 
+;;
+(use-package org)
+(global-set-key (kbd "C-c l") #'org-store-link)
+(global-set-key (kbd "C-c a") #'org-agenda)
+(global-set-key (kbd "C-c c") #'org-capture)
+(setq org-agenda-files '("~/.emacs.d/me.org"))
+
 ;; 
 (use-package drag-stuff)
 (drag-stuff-global-mode)
