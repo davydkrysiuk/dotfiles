@@ -25,5 +25,3 @@
 (drag-stuff-global-mode)
 (drag-stuff-define-keys)
 
-;;
-(use-package rust-mode)
