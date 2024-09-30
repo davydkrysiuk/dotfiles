@@ -22,6 +22,6 @@ fi
 sudo apt install -y git;
 git config --global credential.helper store;
 
-# Debloat
-sudo apt purge -y mlterm* khelpcenter* kate* kfind* kwalletmanager* imagemagick* konsole* plasma-discover*;
-rm -rf $HOME/.mlterm;
+# KDE
+# sudo apt purge -y mlterm* khelpcenter* kate* kfind* kwalletmanager* imagemagick* konsole* plasma-discover*;
+# rm -rf $HOME/.mlterm;
