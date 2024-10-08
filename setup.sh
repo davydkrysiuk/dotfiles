@@ -7,6 +7,7 @@ sudo apt install -y kitty;
 sudo apt install -y emacs;
 emacs -Q -batch -eval "(progn (require 'package) (package-initialize) (package-refresh-contents) (package-upgrade 'org))";
 
+sudo apt install -y vim;
 # Wget
 sudo apt install -y wget;
 
@@ -38,18 +39,22 @@ case "$XDG_CURRENT_DESKTOP" in
 		;;
 esac	
 rm -rf $HOME/.mlterm;
-rm -rf $HOME/.mozilla
+rm -rf $HOME/.mozilla;
 
 # Folders
 mkdir $HOME/Programming;
 
 # Aliases
 if ! grep -q "alias sl=" ~/.bashrc; then
-    echo "alias sl='ls'" >> ~/.bashrc
-    echo "Alias 'sl' added to ~/.bashrc"
+    echo "alias sl='ls'" >> ~/.bashrc;
+    echo "Alias 'sl' added to ~/.bashrc";
 else
-    echo "Alias 'sl' already exists in ~/.bashrc"
+    echo "Alias 'sl' already exists in ~/.bashrc";
 fi
 
-# LaTeX
-sudo apt install -y texlive-base;
+# Languages
+sudo apt install -y clisp;
+sudo apt install -y clang;
+
+# Finish
+sudo apt autoremove -y;
