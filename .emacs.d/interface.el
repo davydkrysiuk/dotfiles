@@ -1,4 +1,4 @@
-(set-frame-font "FiraCode 16" nil t)
+(set-frame-font "monospace 16" nil t)
 (setq default-frame-alist '((undecorated . t)))
 (tool-bar-mode 0)
 (menu-bar-mode 0)
