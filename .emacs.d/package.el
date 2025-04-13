@@ -10,18 +10,20 @@
 	(require 'use-package))
 
 ;;
-(use-package kaolin-themes)
-(load-theme 'kaolin-valley-dark t)
-
-;;
-(use-package org)
-(global-set-key (kbd "C-c l") #'org-store-link)
-(global-set-key (kbd "C-c a") #'org-agenda)
-(global-set-key (kbd "C-c c") #'org-capture)
-(setq org-agenda-files '("~/.emacs.d/me.org"))
+(use-package doom-themes)
+(load-theme 'doom-plain-dark t)
+; (load-theme 'doom-plan t)
 
 ;; 
 (use-package drag-stuff)
 (drag-stuff-global-mode)
 (drag-stuff-define-keys)
 
+(use-package nov)
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+(add-to-list 'auto-mode-alist '("\\.pdf\\'" . nov-mode))
+(add-to-list 'auto-mode-alist '("\\.djvu\\'" . nov-mode))
+
+(use-package beacon)
+(beacon-mode 1)
+(setq beacon-color "'FFBF00")
